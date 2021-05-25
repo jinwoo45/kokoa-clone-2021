@@ -1,6 +1,6 @@
 #chat-screen {
   background-color: #abc1d1;
-  height: 500vh;
+  height: 200vh;
 }
 
 #chat-screen .alt-header,
@@ -32,7 +32,7 @@
 }
 
 .main-chat {
-  margin-top: 180px;
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -115,10 +115,10 @@
 }
 
 .reply .reply__column:first-child {
-  border: var(--main-border);
-  border-radius: 25px;
   box-sizing: border-box;
+  font-size: 20px;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .reply .reply__column:last-child {
@@ -128,6 +128,7 @@
 
 .reply i {
   opacity: 0.5;
+  cursor: pointer;
 }
 .reply input {
   padding: 12px;
@@ -136,11 +137,16 @@
   border-radius: 20px;
 }
 
-.reply__column:last-child > i,
+.reply__column:last-child .icon {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
 .reply__column:last-child button {
   position: absolute;
-  right: 3px;
-  top: 3px;
+  right: -15px;
+  top: 7px;
 }
 
 .reply__column:last-child > i {
@@ -151,8 +157,8 @@
 .reply__column button {
   background-color: var(--yellow);
   border: none;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
 }
 
@@ -177,7 +183,7 @@
 }
 
 .reply:focus-within input {
-  width: 98vw;
+  width: 85vw;
   transform: translateX(-13%) translateY(-80px);
 }
 
